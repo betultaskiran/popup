@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+button {
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+/*popup-container class'ını kullanmanın temel amacı, açılır pencerenin yerleşimini, görünürlüğünü ve stilini yönetmek için uygun bir kapsayıcı oluşturmak ve popup'ın ekranda uygun bir şekilde görüntülenmesini sağlamaktır.Blok elemanlar içinde bulunduğu classın genişliği kadar tüm satırı kaplar*/
+
+.popup-container.active {
+  display: flex;
+}
+
+.popup {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.popup button {
+  background-color: white;
+  color: rebeccapurple;
+  font-size: 2rem;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+/*position: absolute; CSS özelliği, bir elemanın normal belge akışından çıkarılarak belirli bir konuma yerleştirilmesini sağlar. Bu, elemanın konumunun tam olarak belirtilen top, right, bottom, left değerlerine göre ayarlanabileceği anlamına gelir. Ayrıca, eleman en yakın relative, absolute, fixed veya sticky konumlandırılmış atası tarafından referans alınarak konumlandırılır.*/
